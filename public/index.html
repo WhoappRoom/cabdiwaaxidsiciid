@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabdi Waaxid Siciid || Profile Page</title>
+    <meta name="description" content="Cabdi Waaxid Siciid is a passionate web developer from Somalia. Explore his personal projects and learn more about his work and interests.">
+    <meta name="keywords" content="Cabdi Waaxid Siciid, web developer, Somalia, personal projects, web applications, ninyaaban, small pencil, my coder seven, audio waves">
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/chats-room-app.appspot.com/o/app_icon.png?alt=media&token=baf1a3c5-8070-4dac-997a-7127288e99a3">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .profile-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .profile-info {
+            margin-bottom: 20px;
+        }
+        .profile-info h1 {
+            margin: 0 0 10px;
+        }
+        .profile-info p {
+            margin: 5px 0;
+        }
+        .websites a {
+            display: block;
+            color: #1e90ff;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="https://firebasestorage.googleapis.com/v0/b/chats-room-app.appspot.com/o/app_icon.png?alt=media&token=baf1a3c5-8070-4dac-997a-7127288e99a3" alt="Cabdi Waaxid Siciid" class="profile-photo" id="profile-photo">
+        <div class="profile-info">
+            <h1 id="username">Cabdi Waaxid Siciid</h1>
+            <p id="email">cabdiwaaxidsiciid100@gmail.com</p>
+            <p>I am a passionate web developer from Somalia. I love creating beautiful and functional web applications that make people's lives easier. My goal is to continually improve my skills and contribute to the tech community.</p>
+        </div>
+        <h3>My own projects</h3>
+        <div class="websites" id="websites">
+            <a href="https://ninyaaban.site" target="_blank">Personal Website</a>
+            <a href="https://small-pencil.website" target="_blank">Small pencil</a>
+            <a href="https://mycoderseven.site" target="_blank">My Coder Seven</a>
+            <a href="https://audio-waves.vercel.app" target="_blank">Audio Waves</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const profileData = {
+                photo: "https://firebasestorage.googleapis.com/v0/b/chats-room-app.appspot.com/o/app_icon.png?alt=media&token=baf1a3c5-8070-4dac-997a-7127288e99a3",
+                username: "Cabdi Waaxid Siciid",
+                email: "cabdiwaaxidsiciid100@gmail.com",
+                websites: [
+                    { name: "Personal Website", url: "https://ninyaaban.site" },
+                    { name: "Small pencil", url: "https://small-pencil.website" },
+                    { name: "My Coder Seven", url: "https://mycoderseven.site/"},
+                    { name: "Audio Waves", url: "https://audio-waves.vercel.app" }
+                ]
+            };
+
+            document.getElementById("profile-photo").src = profileData.photo;
+            document.getElementById("username").textContent = profileData.username;
+            document.getElementById("email").textContent = profileData.email;
+
+            const websitesContainer = document.getElementById("websites");
+            websitesContainer.innerHTML = profileData.websites.map(site => 
+                `<a href="${site.url}" target="_blank">${site.name}</a>`
+            ).join('');
+        });
+    </script>
+</body>
+</html>
