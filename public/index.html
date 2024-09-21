@@ -4,42 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabdi Waaxid Siciid || Profile Page</title>
-    <meta name="description" content="Cabdi Waaxid Siciid is a passionate web developer from Somalia. Explore his personal projects and learn more about his work and interests.">
-    <meta name="keywords" content="Cabdi Waaxid Siciid, web developer, Somalia, personal projects, web applications, ninyaaban, small pencil, my coder seven, audio waves">
+    <meta name="description" content="Cabdi Waaxid Siciid is a skilled and passionate web developer from Somalia. Explore his personal projects, web applications, and contributions to the tech community. Learn more about his work, skills, and future projects.">
+    <meta name="keywords" content="Cabdi Waaxid Siciid, web developer, Somalia, HTML5, CSS3, JavaScript, Node.js, Firebase, responsive design, web applications, personal projects, ninyaaban, small pencil, my coder seven, audio waves, tech community, UX/UI design, developer portfolio">
+    <meta name="author" content="Cabdi Waaxid Siciid">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="EN">
+    <meta property="og:title" content="Cabdi Waaxid Siciid || Web Developer Profile">
+    <meta property="og:description" content="Discover the web development skills and projects of Cabdi Waaxid Siciid, including his personal websites and applications built with modern technologies.">
+    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/chats-room-app.appspot.com/o/app_icon.png?alt=media&token=baf1a3c5-8070-4dac-997a-7127288e99a3">
+    <meta property="og:url" content="https://cabdiwaaxidsiciid.vercel.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cabdi Waaxid Siciid || Web Developer Profile">
+    <meta name="twitter:description" content="Learn about Cabdi Waaxid Siciid's web development skills, projects, and contributions to the tech world.">
+    <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/chats-room-app.appspot.com/o/app_icon.png?alt=media&token=baf1a3c5-8070-4dac-997a-7127288e99a3">
+    <meta name="twitter:url" content="https://cabdiwaaxidsiciid.vercel.app">
     <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/chats-room-app.appspot.com/o/app_icon.png?alt=media&token=baf1a3c5-8070-4dac-997a-7127288e99a3">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #e0e5ec;
             color: #333;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
         }
         .profile-container {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 400px;
+            background-color: #e0e5ec;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px #ffffff, -5px -5px 15px #ffffff;
+            padding: 30px;
+            max-width: 500px;
             width: 100%;
             text-align: center;
+            position: relative;
         }
         .profile-photo {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
+            padding: 10px;
             margin-bottom: 20px;
-        }
-        .profile-info {
-            margin-bottom: 20px;
+            box-shadow: inset 5px 5px 15px #a3b1c6, inset -5px -5px 15px #ffffff;
         }
         .profile-info h1 {
             margin: 0 0 10px;
+            font-size: 24px;
+            color: #333;
+            text-shadow: 1px 1px 2px #fff;
         }
         .profile-info p {
             margin: 5px 0;
@@ -49,6 +63,51 @@
             color: #1e90ff;
             text-decoration: none;
             margin: 5px 0;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #e0e5ec;
+            box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
+            width: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .websites a:hover {
+            box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
+            transform: scale(1.05);
+        }
+        .websites a i {
+            margin-right: 10px;
+        }
+        .skills ul, .contact-info ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        .skills ul li, .contact-info ul li {
+            background-color: #e0e5ec;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
+            display: flex;
+            align-items: center;
+        }
+        .skills ul li:hover, .contact-info ul li:hover {
+            box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
+            transform: scale(1.02);
+        }
+        .skills ul li i, .contact-info ul li i {
+            margin-right: 10px;
+            color: #1e90ff;
+        }
+        a{
+          text-decoration: none;
+          color: #0076cc;
+          padding: 15px;
+        }
+        .bx{
+          font-size: 25px;
         }
     </style>
 </head>
@@ -60,12 +119,33 @@
             <p id="email">cabdiwaaxidsiciid100@gmail.com</p>
             <p>I am a passionate web developer from Somalia. I love creating beautiful and functional web applications that make people's lives easier. My goal is to continually improve my skills and contribute to the tech community.</p>
         </div>
+
+        <h3>Skills</h3>
+        <div class="skills">
+            <ul>
+                <li><i class='bx bxl-html5'></i>HTML5, CSS3</li>
+                <li><i class='bx bxl-javascript'></i>JavaScript, Node.js</li>
+                <li><i class='bx bxs-cloud'></i>Firebase</li>
+                <li><i class='bx bx-layout'></i>Responsive Design, UX/UI</li>
+            </ul>
+        </div>
+
         <h3>My own projects</h3>
         <div class="websites" id="websites">
-            <a href="https://ninyaaban.site" target="_blank">Personal Website</a>
-            <a href="https://small-pencil.website" target="_blank">Small pencil</a>
-            <a href="https://mycoderseven.site" target="_blank">My Coder Seven</a>
-            <a href="https://audio-waves.vercel.app" target="_blank">Audio Waves</a>
+            <a href="https://ninyaaban.site" target="_blank"><i class='bx bx-link'></i>Personal Website</a>
+            <a href="https://small-pencil.website" target="_blank"><i class='bx bx-link'></i>Small Pencil</a>
+            <a href="https://mycoderseven.site" target="_blank"><i class='bx bx-link'></i>My Coder Seven</a>
+            <a href="https://audio-waves.vercel.app" target="_blank"><i class='bx bx-link'></i>Audio Waves</a>
+        </div>
+
+        <h3>Contact Information</h3>
+        <div class="contact-info">
+            <ul>
+                <li><i class='bx bx-user-circle'></i>Small Pencil: <a href="https://www.small-pencil.website/profile.html?uid=yKWM2ZqH54OH7AtKgYqBC2REYmI2" target="_blank">https://www.small-pencil.website/profile.html?uid=yKWM2ZqH54OH7AtKgYqBC2REYmI2</a></li>
+                <li><i class='bx bxl-github'></i>GitHub: <a href="https://github.com/WhoappRoom" target="_blank">github.com/cabdiwaaxidsiciid</a></li>
+                <li><i class='bx bx-envelope'></i>Email: <a href="mailto:cabdiwaaxidsiciid100@gmail.com">cabdiwaaxidsiciid100@gmail.com</a></li>
+                <li><i class='bx bxl-linkedin-square'></i>LinkedIn: <a href="https://www.linkedin.com/in/cabdi-waaxid-siciid-224b622b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/cabdi-waaxid-siciid</a></li>
+            </ul>
         </div>
     </div>
 
@@ -77,8 +157,8 @@
                 email: "cabdiwaaxidsiciid100@gmail.com",
                 websites: [
                     { name: "Personal Website", url: "https://ninyaaban.site" },
-                    { name: "Small pencil", url: "https://small-pencil.website" },
-                    { name: "My Coder Seven", url: "https://mycoderseven.site/"},
+                    { name: "Small Pencil", url: "https://small-pencil.website" },
+                    { name: "My Coder Seven", url: "https://mycoderseven.site/" },
                     { name: "Audio Waves", url: "https://audio-waves.vercel.app" }
                 ]
             };
@@ -89,7 +169,7 @@
 
             const websitesContainer = document.getElementById("websites");
             websitesContainer.innerHTML = profileData.websites.map(site => 
-                `<a href="${site.url}" target="_blank">${site.name}</a>`
+                `<a href="${site.url}" target="_blank"><i class='bx bx-link'></i>${site.name}</a>`
             ).join('');
         });
     </script>
