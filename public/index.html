@@ -21,98 +21,159 @@
     <link rel="icon" href="favicon.ico" id="icon">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e0e5ec;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #e0e5ec;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        font-size: 13px;
+        justify-content: center;
+    }
+    .profile-container {
+        background-color: #e0e5ec;
+        border-radius: 15px;
+        box-shadow: 5px 5px 15px #ffffff, -5px -5px 15px #ffffff;
+        padding: 30px;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        padding: 15px;
+        border: 1px solid #528241;
+        margin-bottom: 20px;
+        box-shadow: inset 5px 5px 15px #a3b1c6, inset -5px -5px 15px #ffffff;
+    }
+    .profile-info h1 {
+        margin: 0 0 10px;
+        font-size: 24px;
+        color: #333;
+        text-shadow: 1px 1px 2px #fff;
+    }
+    #icon{
+        object-fit: cover;
+    }
+    .profile-info p {
+        margin: 5px 0;
+    }
+    .websites a {
+        display: block;
+        color: #1e90ff;
+        text-decoration: none;
+        margin: 5px 0;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #e0e5ec;
+        box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .websites a:hover {
+        box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
+        transform: scale(1.05);
+    }
+    .websites a i {
+        margin-right: 10px;
+        animation: icon-pulse 1.5s infinite;
+    }
+    .skills ul, .contact-info ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+    }
+    .skills ul li, .contact-info ul li {
+        background-color: #e0e5ec;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .skills ul li:hover, .contact-info ul li:hover {
+        box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
+        transform: scale(1.02);
+    }
+    .skills ul li i, .contact-info ul li i {
+        margin-right: 10px;
+        color: #1e90ff;
+        animation: icon-pulse 1.5s infinite;
+    }
+    /* Sequential animation delay */
+    .skills ul li:nth-child(1) i {
+        animation-delay: 0s;
+    }
+    .skills ul li:nth-child(2) i {
+        animation-delay: 0.3s;
+    }
+    .skills ul li:nth-child(3) i {
+        animation-delay: 0.6s;
+    }
+    .skills ul li:nth-child(4) i {
+        animation-delay: 0.9s;
+    }
+    .websites a:nth-child(1) i {
+        animation-delay: 1.2s;
+    }
+    .websites a:nth-child(2) i {
+        animation-delay: 1.5s;
+    }
+    .websites a:nth-child(3) i {
+        animation-delay: 1.8s;
+    }
+    .websites a:nth-child(4) i {
+        animation-delay: 2.1s;
+    }
+    .contact-info ul li:nth-child(1) i {
+        animation-delay: 2.8s;
+    }
+    .contact-info ul li:nth-child(2) i {
+        animation-delay: 3.1s;
+    }
+    .contact-info ul li:nth-child(3) i {
+        animation-delay: 3.8s;
+    }
+    .contact-info ul li:nth-child(4) i {
+        animation-delay: 4.1s;
+    }
+    @keyframes icon-pulse {
+        0% {
+            transform: scale(1);
         }
-        .profile-container {
-            background-color: #e0e5ec;
-            border-radius: 15px;
-            box-shadow: 5px 5px 15px #ffffff, -5px -5px 15px #ffffff;
-            padding: 30px;
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-            position: relative;
+        50% {
+            transform: scale(1.2);
+            color: #ff0dd6;
         }
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            padding: 10px;
-            margin-bottom: 20px;
-            box-shadow: inset 5px 5px 15px #a3b1c6, inset -5px -5px 15px #ffffff;
+        100% {
+            transform: scale(1);
         }
-        .profile-info h1 {
-            margin: 0 0 10px;
-            font-size: 24px;
-            color: #333;
-            text-shadow: 1px 1px 2px #fff;
-        }
-        #icon{
-            object-fit: cover;
-        }
-        .profile-info p {
-            margin: 5px 0;
-        }
-        .websites a {
-            display: block;
-            color: #1e90ff;
-            text-decoration: none;
-            margin: 5px 0;
-            padding: 15px;
-            border-radius: 10px;
-            background-color: #e0e5ec;
-            box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
-            width: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: left;
-        }
-        .websites a:hover {
-            box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
-            transform: scale(1.05);
-        }
-        .websites a i {
-            margin-right: 10px;
-        }
-        .skills ul, .contact-info ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-        }
-        .skills ul li, .contact-info ul li {
-            background-color: #e0e5ec;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
-            display: flex;
-            align-items: center;
-        }
-        .skills ul li:hover, .contact-info ul li:hover {
-            box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
-            transform: scale(1.02);
-        }
-        .skills ul li i, .contact-info ul li i {
-            margin-right: 10px;
-            color: #1e90ff;
-        }
-        a{
-          text-decoration: none;
-          color: #0076cc;
-          padding: 15px;
-        }
-        .bx{
-          font-size: 25px;
-        }
-    </style>
+    }
+    a{
+        text-decoration: none;
+        color: #0076cc;
+        padding: 15px;
+    }
+    .bx{
+        font-size: 25px;
+        box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    h3{
+        text-align: left;
+    }
+</style>
 </head>
 <body>
     <div class="profile-container">
