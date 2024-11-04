@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private/
+Disallow: /temp/
+
+Sitemap: https://cabdiwaaxidsiciid.vercel.app/sitemap.xml
