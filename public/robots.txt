@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /private/
 Disallow: /temp/
 
-Sitemap: https://cabdiwaaxidsiciid.vercel.app/sitemap.xml
+Sitemap: https://cabdiwaaxidsiciid.site/sitemap.xml
