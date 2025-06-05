@@ -1,361 +1,467 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-gray-900 text-white">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabdi Waaxid Siciid || Profile Page</title>
-    <meta name="description" content="Cabdi Waaxid Siciid is a skilled and passionate web developer from Somalia. Explore his personal projects, web applications, and contributions to the tech community. Learn more about his work, skills, and future projects.">
-    <meta name="keywords" content="Cabdi Waaxid Siciid, web developer, Somalia, HTML5, CSS3, JavaScript, Node.js, Firebase, responsive design, web applications, personal projects, ninyaaban, small pencil, my coder seven, audio waves, tech community, UX/UI design, developer portfolio">
-    <meta name="author" content="Cabdi Waaxid Siciid">
-    <meta name="google-site-verification" content="-Sc2AOOxp3P9T75c7qu6mzbuBegIGFaB6C88zFn7v4w" />
-    <meta name="language" content="EN">
-    <meta name="google-site-verification" content="5tx4EzgJI1p2kI5cPwLRXZNiizbugoVvytnA0eAt4Nc" />
-    <meta property="og:title" content="Cabdi Waaxid Siciid || Web Developer Profile">
-    <meta property="og:description" content="Discover the web development skills and projects of Cabdi Waaxid Siciid, including his personal websites and applications built with modern technologies.">
-    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/chats-room-app.appspot.com/o/app_icon.png?alt=media&token=baf1a3c5-8070-4dac-997a-7127288e99a3">
-    <meta property="og:url" content="https://cabdiwaaxidsiciid.vercel.app">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cabdi Waaxid Siciid || Web Developer Profile">
-    <meta name="twitter:description" content="Learn about Cabdi Waaxid Siciid's web development skills, projects, and contributions to the tech world.">
-    <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/chats-room-app.appspot.com/o/app_icon.png?alt=media&token=baf1a3c5-8070-4dac-997a-7127288e99a3">
-    <meta name="twitter:url" content="https://cabdiwaaxidsiciid.vercel.app">
-    <link rel="icon" href="favicon.ico" id="icon">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio of Cabdi Waaxid Siciid, a Full Stack Developer specializing in JavaScript, Tailwind CSS, and modern web frameworks.">
+  <title>Cabdi Waaxid Siciid | Full Stack Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/Snapchat-789110653.jpg">
+  <style>
     body {
-        font-family: Arial, sans-serif;
-        background-color: #e0e5ec;
-        color: #333;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        font-size: 13px;
-        align-items: center;
-        justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
     }
-    .profile-container {
-        background-color: #e0e5ec;
-        border-radius: 15px;
-        box-shadow: 5px 5px 15px #ffffff, -5px -5px 15px #ffffff;
-        padding: 30px;
-        max-width: 500px;
-        width: 100%;
-        text-align: center;
-        position: relative;
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
     }
-    .profile-photo {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        transition: opacity 0.5s ease;
-        opacity: 1;
-        padding: 15px;
-        border: 1px solid #528241;
-        margin-bottom: 20px;
-        box-shadow: inset 5px 5px 15px #a3b1c6, inset -5px -5px 15px #ffffff;
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
-    .profile-info h1 {
-        margin: 0 0 10px;
-        font-size: 24px;
-        color: #333;
-        text-shadow: 1px 1px 2px #fff;
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
-    #icon{
-        object-fit: cover;
+    .project-card:hover {
+      transform: translateY(-5px) scale(1.02);
     }
-    .profile-info p {
-        margin: 5px 0;
+    .gallery-image {
+      transition: all 0.3s ease;
     }
-    .websites a {
-        display: block;
-        color: #1e90ff;
-        text-decoration: none;
-        margin: 5px 0;
-        padding: 15px;
-        border-radius: 10px;
-        background-color: #e0e5ec;
-        box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
-        width: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .gallery-image:hover {
+      transform: scale(1.05);
     }
-    .websites a:hover {
-        box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
-        transform: scale(1.05);
-    }
-    .websites a i {
-        margin-right: 10px;
-        animation: icon-pulse 1.5s infinite;
-    }
-    .skills ul{
-        list-style: none;
-        padding: 0;
-        text-align: left;
-    }
-    .skills ul li {
-        background-color: #e0e5ec;
-        margin: 10px 0;
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff;
-        display: flex;
-        align-items: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .skills ul li:hover{
-        box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
-        transform: scale(1.02);
-    }
-    .skills ul li i{
-        margin-right: 10px;
-        color: #1e90ff;
-        animation: icon-pulse 1.5s infinite;
-    }
-    .skills ul li:nth-child(1) i {
-        animation-delay: 0s;
-    }
-    .skills ul li:nth-child(2) i {
-        animation-delay: 0.3s;
-    }
-    .skills ul li:nth-child(3) i {
-        animation-delay: 0.6s;
-    }
-    .skills ul li:nth-child(4) i {
-        animation-delay: 0.9s;
-    }
-    .websites a:nth-child(1) i {
-        animation-delay: 1.2s;
-    }
-    .websites a:nth-child(2) i {
-        animation-delay: 1.5s;
-    }
-    .websites a:nth-child(3) i {
-        animation-delay: 1.8s;
-    }
-    .websites a:nth-child(4) i {
-        animation-delay: 2.1s;
-    }
-    .websites a:nth-child(5) i {
-        animation-delay: 2.5s;
-    }
-    .websites a:nth-child(6) i {
-        animation-delay: 3.0s;
-    }
-    .websites a:nth-child(7) i {
-        animation-delay: 3.5s;
-    }
-    @keyframes icon-pulse {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.2);
-            color: #ff0dd6;
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-    a{
-        text-decoration: none;
-        color: #0076cc;
-        padding: 15px;
-    }
-    .bx{
-        font-size: 25px;
-        box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
-        border-radius: 50%;
-        padding: 5px;
-    }
-    h3{
-        text-align: left;
-    }
-    button{
-      padding: 15px;
-      border: none;
-      cursor: pointer;
-      background-color: #e0e5ec;
-    }
-    #top{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      width: 100%;
-    }
-    button img{
-      width: 30px;
-      height: 30px;
-      object-fit: cover;
-      padding: 5px;
-      box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
-      border-radius: 50%;
-    }
-    #images {
-    display: grid;
-    max-width: 500px;
-    position: relative;
-    padding: 30px;
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px; /* Increased gap for better spacing */
-}
-
-#images img {
-    width: 200px;
-    object-fit: cover;
-    height: 200px;
-    border-radius: 10px;
-    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
-}
-
-/* Center image styles */
-#img-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    border: 3px solid #ff5722; /* Distinct border color for center image */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for center image */
-}
-
-/* Static rotation styles for other images with different borders */
-#images img:nth-child(1) {
-    border: 2px solid #3f51b5; /* Blue border */
-    transform: rotate(3deg);
-}
-
-#images img:nth-child(2) {
-    border: 2px solid #4caf50; /* Green border */
-    transform: rotate(-3deg);
-}
-
-#images img:nth-child(3) {
-    border: 2px solid #f44336; /* Red border */
-    transform: rotate(3deg);
-}
-
-#images img:nth-child(4) {
-    border: 2px solid #ff9800; /* Orange border */
-    transform: rotate(-3deg);
-}
-
-/* Scale effect on hover */
-#images img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-}
-.fade-out {
-    opacity: 0; /* Fade out to invisible */
-  }
-</style>
+  </style>
 </head>
-<body>
-    <div id="top">
-      <div id="left">
-        <button id="small-pencil" onclick="openURL('https://www.small-pencil.website/profile.html?uid=yKWM2ZqH54OH7AtKgYqBC2REYmI2')" style="color: #212121"><img src="https://small-pencil.website/logo.png" alt="Small Pencil Logo"></button>
+<body class="antialiased">
+
+  <!-- Navigation -->
+  <nav class="container mx-auto px-6 py-4 z-50 bg-gray-900/90 backdrop-blur-sm">
+    <div class="flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">CWS</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="hover:text-blue-400 transition duration-300">About</a>
+        <a href="#skills" class="hover:text-blue-400 transition duration-300">Skills</a>
+        <a href="#projects" class="hover:text-blue-400 transition duration-300">Projects</a>
+        <a href="#gallery" class="hover:text-blue-400 transition duration-300">Gallery</a>
+        <a href="#contact" class="hover:text-blue-400 transition duration-300">Contact</a>
       </div>
-      <div id="right">
-        <button id="github" onclick="openURL('https://github.com/WhoappRoom')" style="color: #2b2b2b"><i class="bx bxl-github"></i></button>
-        <button id="linkedin" onclick="openURL('https://www.linkedin.com/in/cabdi-waaxid-siciid-224b622b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app')" style="color: #0076cc"><i class="bx bxl-linkedin-square"></i></button>
-        <button id="email-btn" onclick="openURL('mailto:cabdiwaaxidsiciid100@gmail.com')" style="color: #000"><i class="bx bx-envelope"></i></button>
+      <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden mt-4 space-y-2" id="mobile-menu">
+      <a href="#about" class="block py-2 hover:text-blue-400 transition duration-300">About</a>
+      <a href="#skills" class="block py-2 hover:text-blue-400 transition duration-300">Skills</a>
+      <a href="#projects" class="block py-2 hover:text-blue-400 transition duration-300">Projects</a>
+      <a href="#gallery" class="block py-2 hover:text-blue-400 transition duration-300">Gallery</a>
+      <a href="#contact" class="block py-2 hover:text-blue-400 transition duration-300">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-900">
+    <div class="max-w-4xl mx-auto">
+      <div class="animate-float inline-block mb-6">
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-full w-24 h-24 mx-auto flex items-center justify-center shadow-lg overflow-hidden">
+          <img src="images/profile1.jpg" alt="Cabdi Waaxid Siciid" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-blue-300 to-purple-400 bg-clip-text text-transparent">Cabdi Waaxid Siciid</h1>
+      <p class="text-xl md:text-2xl text-gray-400 mb-8">Full Stack Developer | JavaScript Specialist</p>
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-8">Crafting digital experiences that are fast, responsive, and user-friendly.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://github.com/WhoappRoom" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/20">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://whoappsomali.site/profile/cabdiwaaxid" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/20">
+          <i class="fab fa-w border border-gray-100 rounded-full aspect-square p-2"></i> Whoapp
+        </a>
+        <a href="https://ninyaaban.site/profile/cabdiwaaxid" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/20">
+          <i class="fab fa-n border border-gray-100 rounded-full aspect-square p-2"></i> Ninyaaban
+        </a>
+        <a href="#contact" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/30">
+          <i class="fas fa-envelope"></i> Contact Me
+        </a>
       </div>
     </div>
-    <div class="profile-container">
-        <img src="https://firebasestorage.googleapis.com/v0/b/chats-room-app.appspot.com/o/app_icon.png?alt=media&token=baf1a3c5-8070-4dac-997a-7127288e99a3" alt="Cabdi Waaxid Siciid Picture" class="profile-photo" id="profile-photo">
-        <div class="profile-info">
-            <h1 id="username">Cabdi Waaxid Siciid</h1>
-            <p id="email">cabdiwaaxidsiciid100@gmail.com</p>
-            <p>I am a passionate web developer from Somalia. I love creating beautiful and functional web applications that make people's lives easier. My goal is to continually improve my skills and contribute to the tech community.</p>
-        </div>
+  </section>
 
-        <h3>Skills</h3>
-        <div class="skills">
-            <ul>
-                <li><i class='bx bxl-html5'></i>HTML5, CSS3</li>
-                <li><i class='bx bxl-javascript'></i>JavaScript, Node.js (Express)</li>
-                <li><i class='bx bxs-cloud'></i>Firebase</li>
-                <li><i class='bx bx-layout'></i>Responsive Design, UX/UI</li>
-            </ul>
-        </div>
-
-        <h3>My own projects</h3>
-        <div class="websites" id="websites">
-            <a href="https://ninyaaban.site" target="_blank"><i class='bx bx-world'></i>Personal Website</a>
-            <a href="https://small-pencil.website" target="_blank"><i class='bx bx-link'></i>Small Pencil</a>
-            <a href="https://smallpenchat.site" target="_blank"><i class='bx bx-link'></i>Small Pen Chat</a>
-            <a href="https://whoappsomali.site" target="_blank"><i class='bx bx-link'></i>Whoapp (Website)</a>
-            <a href="https://www.appcreator24.com/app2609448-vag0so" target="_blank"><i class='bx bx-link'></i>Whoapp (Android)</a>
-            <a href="https://mycoderseven.site" target="_blank"><i class='bx bx-link'></i>My Coder Seven</a>
-            <a href="https://audio-waves.vercel.app" target="_blank"><i class='bx bx-link'></i>Audio Waves</a>
-        </div>
+  <!-- About Me Section -->
+  <section id="about" class="max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-semibold mb-2 inline-block relative">
+        <span class="relative z-10 px-4">👨‍💻 About Me</span>
+        <span class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></span>
+      </h2>
     </div>
-    <div id="images">
-      <img src="/Snapchat-320767950.jpg" alt="Cabdi Waaxid Siciid Photo">
-      <img src="/Snapchat-1280209316.jpg" alt="Cabdi Waaxid Siciid Photo">
-      <img src="/Snapchat-1316731816.jpg" alt="Cabdi Waaxid Siciid Photo">
-      <img src="/Snapchat-411436830.jpg" alt="Cabdi Waaxid Siciid Photo">
-      <img style="display: none;"src="https://firebasestorage.googleapis.com/v0/b/chats-room-app.appspot.com/o/app_icon.png?alt=media&token=baf1a3c5-8070-4dac-997a-7127288e99a3" alt="Cabdi Waaxid Siciid Photo">
-      <img id="img-center" src="/Snapchat-789110653.jpg" alt="Cabdi Waaxid Siciid Image">
+    <div class="flex flex-col md:flex-row items-center gap-12 text-left">
+      <div class="md:w-1/3 flex justify-center">
+        <div class="relative">
+          <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-full w-64 h-64 p-1 animate-float">
+            <div class="bg-gray-800 rounded-full w-full h-full overflow-hidden shadow-xl">
+              <img src="images/profile2.jpg" alt="Cabdi Waaxid Siciid" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-gray-800 rounded-full p-3 shadow-lg border-2 border-gray-700">
+            <div class="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center">
+              <i class="fas fa-code text-white text-xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md:w-2/3">
+        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+          I'm Cabdi Waaxid Siciid, a passionate full-stack developer with expertise in building modern web applications. 
+          I specialize in creating seamless digital experiences that bridge beautiful interfaces with robust backend systems.
+        </p>
+        <p class="text-gray-300 text-lg leading-relaxed mb-8">
+          With a focus on performance, accessibility, and clean code, I deliver solutions that are both technically sound 
+          and visually appealing. My approach combines technical expertise with creative problem-solving to build applications 
+          that users love.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#projects" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-300">
+            View My Work
+          </a>
+          <a href="#contact" class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-2 rounded-lg transition-all duration-300">
+            Contact Me
+          </a>
+        </div>
+      </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const profileData = {
-                photo: "https://firebasestorage.googleapis.com/v0/b/chats-room-app.appspot.com/o/app_icon.png?alt=media&token=baf1a3c5-8070-4dac-997a-7127288e99a3",
-                username: "Cabdi Waaxid Siciid",
-                email: "cabdiwaaxidsiciid100@gmail.com",
-                websites: [
-                    { name: "Personal Website", url: "https://ninyaaban.site" },
-                    { name: "Small Pencil", url: "https://small-pencil.website" },
-                    { name: "Small Pen Chat", url: "https://smallpenchat.site" },
-                    { name: "Whoapp (Website)", url: "https://whoappsomali.site" },
-                    { name: "Whoapp (Android App)", url: "https://www.appcreator24.com/app2609448-vag0so" },
-                    { name: "My Coder Seven", url: "https://mycoderseven.site/" },
-                    { name: "Audio Waves", url: "https://audio-waves.vercel.app" }
-                ]
-            };
+  </section>
 
-            document.getElementById("profile-photo").src = profileData.photo;
-            document.getElementById("username").textContent = profileData.username;
-            document.getElementById("email").textContent = profileData.email;
+  <!-- Skills Section -->
+  <section id="skills" class="max-w-6xl mx-auto px-6 py-20 bg-gray-800/30">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-semibold mb-2 inline-block relative">
+        <span class="relative z-10 px-4">🛠 Skills & Expertise</span>
+        <span class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></span>
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Technologies I work with to bring ideas to life</p>
+    </div>
 
-            const websitesContainer = document.getElementById("websites");
-            websitesContainer.innerHTML = profileData.websites.map(site => 
-                `<a href="${site.url}" target="_blank"><i class='bx bx-world'></i>${site.name}</a>`
-            ).join('');
-        });
-        function openURL(url) {
-          window.open(url)
-        }
-        function changeProfile(img) {
-          const profilePhoto = document.getElementById('profile-photo');
-          profilePhoto.classList.add('fade-out');
-          setTimeout(() => {
-            profilePhoto.src = img;
-            profilePhoto.classList.remove('fade-out');
-          }, 500);
-        }
-        const imgs = document.querySelectorAll('#images img');
-        let currentIndex = 0;
-        let delay = 3000;
-        function startInfiniteLoop() {
-          setInterval(() => {
-            const img = imgs[currentIndex];
-            changeProfile(img.src); 
-            currentIndex = (currentIndex + 1) % imgs.length;
-          }, delay);
-        }
-        startInfiniteLoop();
-    </script>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Frontend -->
+      <div class="skill-card bg-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-blue-500 border border-gray-700">
+        <div class="text-blue-400 mb-4 text-3xl">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Frontend</h3>
+        <ul class="text-gray-400 text-sm space-y-1">
+          <li>HTML5 & CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Tailwind CSS</li>
+          <li>Responsive Design</li>
+        </ul>
+      </div>
+
+      <!-- Backend -->
+      <div class="skill-card bg-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-purple-500 border border-gray-700">
+        <div class="text-purple-400 mb-4 text-3xl">
+          <i class="fas fa-server"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Backend</h3>
+        <ul class="text-gray-400 text-sm space-y-1">
+          <li>Node.js</li>
+          <li>Novaxjs2</li>
+          <li>API Development</li>
+          <li>Authentication</li>
+        </ul>
+      </div>
+
+      <!-- Databases -->
+      <div class="skill-card bg-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-green-500 border border-gray-700">
+        <div class="text-green-400 mb-4 text-3xl">
+          <i class="fas fa-database"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Databases</h3>
+        <ul class="text-gray-400 text-sm space-y-1">
+          <li>Supabase (Most i use)</li>
+          <li>Firebase</li>
+        </ul>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-card bg-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-yellow-500 border border-gray-700">
+        <div class="text-yellow-400 mb-4 text-3xl">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Tools & More</h3>
+        <ul class="text-gray-400 text-sm space-y-1">
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-semibold mb-2 inline-block relative">
+        <span class="relative z-10 px-4">🚀 Featured Projects</span>
+        <span class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></span>
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Here are some of my recent projects that showcase my skills and passion for development</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Whoapp -->
+      <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 border border-gray-700 hover:border-blue-500">
+        <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center relative overflow-hidden">
+          <i class="fas fa-video text-5xl text-gray-500 group-hover:text-blue-400 transition z-10"></i>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end p-4">
+            <a href="http://whoappsomali.site/" target="_blank" class="text-white hover:text-blue-400">View Project →</a>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Whoapp</h3>
+          <p class="text-gray-400 mb-4">A platform for sharing videos and entertainment with a focus on user experience.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-700 text-xs px-2 py-1 rounded">Novaxjs2</span>
+            <span class="bg-gray-700 text-xs px-2 py-1 rounded">JavaScript</span>
+            <span class="bg-gray-700 text-xs px-2 py-1 rounded">Tailwind CSS</span>
+            <span class="bg-gray-700 text-xs px-2 py-1 rounded">Supabase</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <a href="http://whoappsomali.site/" target="_blank" class="text-blue-400 hover:underline flex items-center gap-1 text-sm">
+              Visit Site <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- NinYaaban -->
+      <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 border border-gray-700 hover:border-purple-500">
+        <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center relative overflow-hidden">
+          <i class="fas fa-newspaper text-5xl text-gray-500 group-hover:text-purple-400 transition z-10"></i>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end p-4">
+            <a href="https://ninyaaban.site/" target="_blank" class="text-white hover:text-purple-400">View Project →</a>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">NinYaaban</h3>
+          <p class="text-gray-400 mb-4">
+            A modern publishing platform for open expression and storytelling with a clean, minimal UX.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-700 text-xs px-2 py-1 rounded">Novaxjs2</span>
+            <span class="bg-gray-700 text-xs px-2 py-1 rounded">JavaScript</span>
+            <span class="bg-gray-700 text-xs px-2 py-1 rounded">Node.js</span>
+            <span class="bg-gray-700 text-xs px-2 py-1 rounded">Supabase</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <a href="https://ninyaaban.site/" target="_blank" class="text-purple-400 hover:underline flex items-center gap-1 text-sm">
+              Visit Site <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Novaxjs2 -->
+      <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 border border-gray-700 hover:border-green-500">
+        <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center relative overflow-hidden">
+          <i class="fas fa-code-branch text-5xl text-gray-500 group-hover:text-green-400 transition z-10"></i>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end p-4">
+            <a href="https://novaxjs2.vercel.app/" target="_blank" class="text-white hover:text-green-400">View Project →</a>
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Novaxjs2</h3>
+          <p class="text-gray-400 mb-4">
+            A high-performance Node.js framework designed for simplicity and power with built-in features.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-700 text-xs px-2 py-1 rounded">Node.js</span>
+            <span class="bg-gray-700 text-xs px-2 py-1 rounded">JavaScript</span>
+            <span class="bg-gray-700 text-xs px-2 py-1 rounded">Framework</span>
+            <span class="bg-gray-700 text-xs px-2 py-1 rounded">Open Source</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <a href="https://novaxjs2.vercel.app/" target="_blank" class="text-green-400 hover:underline flex items-center gap-1 text-sm">
+              Explore <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="https://whoappsomali.site/profile/novaxjs2" target="_blank" class="text-gray-400 hover:text-green-400">
+              <i class="fab fa-w"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="max-w-6xl mx-auto px-6 py-20 bg-gray-800/20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-semibold mb-2 inline-block relative">
+        <span class="relative z-10 px-4">💼 My Services</span>
+        <span class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></span>
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">I build tailored web solutions to match your needs and budget</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Basic Website -->
+      <div class="service-card bg-gray-800 p-8 rounded-xl">
+        <div class="flex items-center mb-6">
+          <div class="bg-blue-500/20 p-3 rounded-full mr-4">
+            <i class="fas fa-file-code text-blue-400 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold">Basic Website</h3>
+        </div>
+        <p class="text-gray-400 mb-6">Perfect for individuals or small businesses needing a simple online presence.</p>
+        <ul class="text-gray-300 space-y-3 mb-8">
+          <li class="flex items-start">
+            <i class="fas fa-check text-blue-400 mt-1 mr-2 text-sm"></i>
+            <span>1-5 pages with responsive design</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-blue-400 mt-1 mr-2 text-sm"></i>
+            <span>Basic contact form</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-blue-400 mt-1 mr-2 text-sm"></i>
+            <span>SEO optimized</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-blue-400 mt-1 mr-2 text-sm"></i>
+            <span>Social media integration</span>
+          </li>
+        </ul>
+        <div class="bg-gray-700/50 p-4 rounded-lg">
+          <p class="text-blue-400 font-medium">Ideal for:</p>
+          <p class="text-gray-400 text-sm">Portfolios, small business sites, personal blogs</p>
+        </div>
+      </div>
+
+      <!-- Standard Web Application -->
+      <div class="service-card bg-gray-800 p-8 rounded-xl">
+        <div class="flex items-center mb-6">
+          <div class="bg-purple-500/20 p-3 rounded-full mr-4">
+            <i class="fas fa-laptop-code text-purple-400 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold">Standard Web App</h3>
+        </div>
+        <p class="text-gray-400 mb-6">For businesses needing interactive features and custom functionality.</p>
+        <ul class="text-gray-300 space-y-3 mb-8">
+          <li class="flex items-start">
+            <i class="fas fa-check text-purple-400 mt-1 mr-2 text-sm"></i>
+            <span>Custom database integration</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-purple-400 mt-1 mr-2 text-sm"></i>
+            <span>User authentication system</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-purple-400 mt-1 mr-2 text-sm"></i>
+            <span>API development</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-purple-400 mt-1 mr-2 text-sm"></i>
+            <span>Admin dashboard</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-purple-400 mt-1 mr-2 text-sm"></i>
+            <span>Ongoing maintenance options</span>
+          </li>
+        </ul>
+        <div class="bg-gray-700/50 p-4 rounded-lg">
+          <p class="text-purple-400 font-medium">Ideal for:</p>
+          <p class="text-gray-400 text-sm">SaaS products, custom web applications, business tools</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <p class="text-gray-400 mb-6">Have a different project in mind? Let's discuss your specific needs!</p>
+      <a href="#contact" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg transition-all duration-300 inline-flex items-center gap-2 hover:shadow-lg hover:shadow-blue-500/30">
+        <i class="fas fa-paper-plane"></i> Get a Custom Quote
+      </a>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-semibold mb-2 inline-block relative">
+        <span class="relative z-10 px-4">📸 Gallery</span>
+        <span class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></span>
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">A glimpse into my world beyond coding</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div class="rounded-lg overflow-hidden h-48 bg-gray-800 border border-gray-700 hover:border-blue-500 transition-all duration-300 gallery-image">
+        <img src="/Snapchat-1280209316.jpg" alt="Cabdi Waaxid Siciid" class="w-full h-full object-cover">
+      </div>
+      <div class="rounded-lg overflow-hidden h-48 bg-gray-800 border border-gray-700 hover:border-purple-500 transition-all duration-300 gallery-image">
+        <img src="/Snapchat-1316731816.jpg" alt="Cabdi Waaxid Siciid" class="w-full h-full object-cover">
+      </div>
+      <div class="rounded-lg overflow-hidden h-48 bg-gray-800 border border-gray-700 hover:border-green-500 transition-all duration-300 gallery-image">
+        <img src="/Snapchat-320767950.jpg" alt="Cabdi Waaxid Siciid" class="w-full h-full object-cover">
+      </div>
+      <div class="rounded-lg overflow-hidden h-48 bg-gray-800 border border-gray-700 hover:border-yellow-500 transition-all duration-300 gallery-image">
+        <img src="/Snapchat-411436830.jpg" alt="Cabdi Waaxid Siciid" class="w-full h-full object-cover">
+      </div>
+      <div class="rounded-lg overflow-hidden h-48 bg-gray-800 border border-gray-700 hover:border-pink-500 transition-all duration-300 gallery-image">
+        <img src="/Snapchat-789110653.jpg" alt="Cabdi Waaxid Siciid" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl my-8">
+    <h2 class="text-3xl font-semibold mb-2 inline-block relative">
+      <span class="relative z-10 px-4">📬 Get In Touch</span>
+      <span class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></span>
+    </h2>
+    <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
+      Interested in working together or have a project in mind? Feel free to reach out!
+    </p>
+    <div class="flex flex-col md:flex-row justify-center gap-6">
+      <a href="mailto:cabdiwaaxidsiciid100@gmail.com" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-blue-500/30">
+        <i class="fas fa-envelope text-xl"></i>
+        <span>Email Me</span>
+      </a>
+      <a href="https://github.com/WhoappRoom" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-blue-500/20">
+        <i class="fab fa-github text-xl"></i>
+        <span>GitHub Profile</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 bg-gray-800/50 text-gray-500 text-sm">
+    <div class="container mx-auto px-6">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://github.com/WhoappRoom" target="_blank" class="hover:text-blue-400 transition duration-300 text-lg">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:cabdiwaaxidsiciid100@gmail.com" class="hover:text-blue-400 transition duration-300 text-lg">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <p>&copy; 2025 Cabdi Waaxid Siciid. All rights reserved.</p>
+      <p class="mt-2 text-xs text-gray-600">Built with ❤️ and modern web technologies</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
